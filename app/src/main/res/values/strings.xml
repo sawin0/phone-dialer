@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">PhoneDialer</string>
+    <string name="b9">9</string>
+    <string name="b8">8</string>
+    <string name="b7">7</string>
+    <string name="b6">6</string>
+    <string name="b5">5</string>
+    <string name="b4">4</string>
+    <string name="b3">3</string>
+    <string name="b2">2</string>
+    <string name="b1">1</string>
+    <string name="b0">0</string>
+    <string name="divide">/</string>
+    <string name="multiply">*</string>
+    <string name="plus">+</string>
+    <string name="minus">-</string>
+    <string name="ce">ce</string>
+    <string name="equals">=</string>
 </resources>
