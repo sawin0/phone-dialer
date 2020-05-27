@@ -15,102 +15,79 @@ import com.karumi.dexter.listener.PermissionDeniedResponse
 import com.karumi.dexter.listener.PermissionGrantedResponse
 import com.karumi.dexter.listener.PermissionRequest
 import com.karumi.dexter.listener.single.PermissionListener
+import com.sabin.phonedialer.databinding.ActivityMainBinding
 
 
 class MainActivity : AppCompatActivity(), PermissionListener {
 
-    lateinit var tvDisplay: TextView
-    lateinit var ibCall: ImageView
-    lateinit var ivDel: ImageView
-    lateinit var btn1: Button
-    lateinit var btn2: Button
-    lateinit var btn3: Button
-    lateinit var btn4: Button
-    lateinit var btn5: Button
-    lateinit var btn6: Button
-    lateinit var btn7: Button
-    lateinit var btn8: Button
-    lateinit var btn9: Button
-    lateinit var btn0: Button
-
     var phoneNumber: String = ""
+
+    lateinit var binding: ActivityMainBinding
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
 
-        tvDisplay = findViewById(R.id.tvDisplay)
-        ibCall = findViewById(R.id.ivCall)
-        ivDel = findViewById(R.id.ivDel)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        btn0 = findViewById(R.id.button0)
-        btn1 = findViewById(R.id.button1)
-        btn2 = findViewById(R.id.button2)
-        btn3 = findViewById(R.id.button3)
-        btn4 = findViewById(R.id.button4)
-        btn5 = findViewById(R.id.button5)
-        btn6 = findViewById(R.id.button6)
-        btn7 = findViewById(R.id.button7)
-        btn8 = findViewById(R.id.button8)
-        btn9 = findViewById(R.id.button9)
 
-        ibCall.setOnClickListener {
+        binding.ivCall.setOnClickListener {
             checkPhonePermission()
         }
 
-        ivDel.setOnClickListener {
+        binding.ivDel.setOnClickListener {
             phoneNumber = phoneNumber.dropLast(1)
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
 
 
-        ivDel.setOnLongClickListener{
+        binding.ivDel.setOnLongClickListener{
             phoneNumber = ""
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
             true
         }
 
-        btn0.setOnClickListener{
+        binding.button0.setOnClickListener{
             phoneNumber = phoneNumber.plus("0")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
             print(phoneNumber)
         }
-        btn1.setOnClickListener{
+        binding.button1.setOnClickListener{
             phoneNumber = phoneNumber.plus("1")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn2.setOnClickListener{
+        binding.button2.setOnClickListener{
             phoneNumber = phoneNumber.plus("2")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn3.setOnClickListener{
+        binding.button3.setOnClickListener{
             phoneNumber = phoneNumber.plus("3")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn4.setOnClickListener{
+        binding.button4.setOnClickListener{
             phoneNumber = phoneNumber.plus("4")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn5.setOnClickListener{
+        binding.button5.setOnClickListener{
             phoneNumber = phoneNumber.plus("5")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn6.setOnClickListener{
+        binding.button6.setOnClickListener{
             phoneNumber = phoneNumber.plus("6")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn7.setOnClickListener{
+        binding.button7.setOnClickListener{
             phoneNumber = phoneNumber.plus("7")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn8.setOnClickListener{
+        binding.button8.setOnClickListener{
             phoneNumber = phoneNumber.plus("8")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
-        btn9.setOnClickListener{
+        binding.button9.setOnClickListener{
             phoneNumber = phoneNumber.plus("9")
-            tvDisplay.text = phoneNumber
+            binding.tvDisplay.text = phoneNumber
         }
 
     }
