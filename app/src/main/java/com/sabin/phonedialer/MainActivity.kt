@@ -64,6 +64,13 @@ class MainActivity : AppCompatActivity(), PermissionListener {
             tvDisplay.text = phoneNumber
         }
 
+
+        ivDel.setOnLongClickListener{
+            phoneNumber = ""
+            tvDisplay.text = phoneNumber
+            true
+        }
+
         btn0.setOnClickListener{
             phoneNumber = phoneNumber.plus("0")
             tvDisplay.text = phoneNumber
