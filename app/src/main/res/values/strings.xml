@@ -16,4 +16,6 @@
     <string name="minus">-</string>
     <string name="ce">ce</string>
     <string name="equals">=</string>
+    <string name="ivCallDes">Touch to call</string>
+    <string name="ivDelDes">Touch to delete phone number</string>
 </resources>

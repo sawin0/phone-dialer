@@ -7,4 +7,5 @@
     <color name="btnColorNumber">#008577</color>
     <color name="btnColorOperation">#DFDFDF</color>
     <color name="btnBackgroundColor">#222222</color>
+    <color name="uiBackgroundColor">#2C2C2C</color>
 </resources>
